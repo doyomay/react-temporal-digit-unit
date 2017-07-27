@@ -13,7 +13,7 @@ class DigitComponent extends Component {
         let nameNumbers = ["zero", "one", "two", "three", "fourth", "five", "six", "seven", "eight", "nine"];
         if (typeof number === "string") {
             let stringNumber = nameNumbers.indexOf(number);
-            return stringNumber === -1 ? '' : stringNumber;
+            return stringNumber === -1 ? 'undefined' : stringNumber;
         }
         return nameNumbers[number];
     }
