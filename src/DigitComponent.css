@@ -1,0 +1,176 @@
+.tablero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #000;
+    width: 500px;
+    height: 100px;
+}
+
+.digit {
+    position: relative;
+    padding: 5px;
+    width: 45px;
+    height: 55px;
+    background-color: #000;
+    box-sizing: border-box;
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+}
+
+.digit span {
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 20px;
+    background-color: #252525;
+    border-radius: 5px;
+}
+
+.digit span:nth-child(1) {
+    top: -5px;
+    left: 19px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.digit span:nth-child(2) {
+    right: 5px;
+    top: 5px;
+}
+
+.digit span:nth-child(3) {
+    right: 5px;
+    bottom: 5px;
+}
+
+.digit span:nth-child(4) {
+    left: 19px;
+    bottom: -5px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.digit span:nth-child(5) {
+    left: 5px;
+    bottom: 5px;
+}
+
+.digit span:nth-child(6) {
+    left: 5px;
+    top: 5px;
+}
+
+.digit span:nth-child(7) {
+    left: 19px;
+    top: 19px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.digit.zero span:not(:nth-child(7)) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.one span:nth-child(2),
+.digit.one span:nth-child(3) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.two span:nth-child(1),
+.digit.two span:nth-child(2),
+.digit.two span:nth-child(4),
+.digit.two span:nth-child(5),
+.digit.two span:nth-child(7) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.three span:nth-child(1),
+.digit.three span:nth-child(2),
+.digit.three span:nth-child(3),
+.digit.three span:nth-child(4),
+.digit.three span:nth-child(7) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.fourth span:nth-child(2),
+.digit.fourth span:nth-child(3),
+.digit.fourth span:nth-child(6),
+.digit.fourth span:nth-child(7) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.five span:nth-child(1),
+.digit.five span:nth-child(3),
+.digit.five span:nth-child(4),
+.digit.five span:nth-child(6),
+.digit.five span:nth-child(7) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.six span:not(:nth-child(2)) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.seven span:nth-child(1),
+.digit.seven span:nth-child(2),
+.digit.seven span:nth-child(3) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.eight span {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.nine span:not(:nth-child(5)) {
+    background-color: #f55f46;
+    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+
+/*
+@-webkit-keyframes pulse-color {
+    0%,
+    100% {
+        background-color: #252525;
+    }
+    50% {
+        background-color: #f55f46;
+    }
+}
+
+@keyframes pulse-color {
+    0%,
+    100% {
+        background-color: #252525;
+    }
+    50% {
+        background-color: #f55f46;
+    }
+}
+*/
