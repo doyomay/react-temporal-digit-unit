@@ -5,7 +5,20 @@ import DigitComponent from './DigitComponent';
 import moment from 'moment';
 
 class TemporalDigitUnit extends Component {
-  render() { return (<section className="tablero"> {this.props.children} </section>) };
+  constructor(props){
+    super(props);
+    this.state = {
+      dates : {
+      present: [],
+      destination:[],
+      last_time: []  
+      }
+    }
+  }
+  render() { return (
+      <section className="tablero"> {this.props.children} </section>
+    ); 
+  };
 }
 
 class TableroSeparetorComponent extends Component {
