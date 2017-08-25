@@ -12,6 +12,7 @@
     transition: 1s all ease;
     transform: rotateX(0);
 }
+
 .tablero:hover {
     transform: rotateX(5deg);
 }
@@ -151,7 +152,228 @@
 
 .digit.nine span:not(:nth-child(5)) {
     background-color: #f55f46;
-    -webkit-animation: pulse-color 2s infinite;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.undefined span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-a span:nth-child(1),
+.digit.letter-a span:nth-child(2),
+.digit.letter-a span:nth-child(3),
+.digit.letter-a span:nth-child(5),
+.digit.letter-a span:nth-child(6),
+.digit.letter-a span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-b span:nth-child(3),
+.digit.letter-b span:nth-child(4),
+.digit.letter-b span:nth-child(5),
+.digit.letter-b span:nth-child(6),
+.digit.letter-b span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-c span:nth-child(1),
+.digit.letter-c span:nth-child(4),
+.digit.letter-c span:nth-child(5),
+.digit.letter-c span:nth-child(6) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-d span:nth-child(2),
+.digit.letter-d span:nth-child(3),
+.digit.letter-d span:nth-child(4),
+.digit.letter-d span:nth-child(5),
+.digit.letter-d span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-e span:nth-child(1),
+.digit.letter-e span:nth-child(4),
+.digit.letter-e span:nth-child(5),
+.digit.letter-e span:nth-child(6),
+.digit.letter-e span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-f span:nth-child(1),
+.digit.letter-f span:nth-child(5),
+.digit.letter-f span:nth-child(6),
+.digit.letter-f span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-g span:nth-child(1),
+.digit.letter-g span:nth-child(2),
+.digit.letter-g span:nth-child(3),
+.digit.letter-g span:nth-child(4),
+.digit.letter-g span:nth-child(6),
+.digit.letter-g span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-h span:nth-child(2),
+.digit.letter-h span:nth-child(3),
+.digit.letter-h span:nth-child(5),
+.digit.letter-h span:nth-child(6),
+.digit.letter-h span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-i span:nth-child(5),
+.digit.letter-i span:nth-child(6) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-j span:nth-child(2),
+.digit.letter-j span:nth-child(3),
+.digit.letter-j span:nth-child(4),
+.digit.letter-j span:nth-child(5) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-k span:nth-child(2),
+.digit.letter-k span:nth-child(3),
+.digit.letter-k span:nth-child(5),
+.digit.letter-k span:nth-child(6),
+.digit.letter-k span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-l span:nth-child(4),
+.digit.letter-l span:nth-child(5),
+.digit.letter-l span:nth-child(6) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-m span:nth-child(1),
+.digit.letter-m span:nth-child(3),
+.digit.letter-m span:nth-child(5) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-n span:nth-child(3),
+.digit.letter-n span:nth-child(5),
+.digit.letter-n span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-o span:nth-child(1),
+.digit.letter-o span:nth-child(2),
+.digit.letter-o span:nth-child(3),
+.digit.letter-o span:nth-child(4),
+.digit.letter-o span:nth-child(5),
+.digit.letter-o span:nth-child(6) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-p span:nth-child(1),
+.digit.letter-p span:nth-child(2),
+.digit.letter-p span:nth-child(5),
+.digit.letter-p span:nth-child(6),
+.digit.letter-p span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-q span:nth-child(1),
+.digit.letter-q span:nth-child(2),
+.digit.letter-q span:nth-child(3),
+.digit.letter-q span:nth-child(6),
+.digit.letter-q span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-r span:nth-child(5),
+.digit.letter-r span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-s span:nth-child(1),
+.digit.letter-s span:nth-child(3),
+.digit.letter-s span:nth-child(4),
+.digit.letter-s span:nth-child(6),
+.digit.letter-s span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-t span:nth-child(4),
+.digit.letter-t span:nth-child(5),
+.digit.letter-t span:nth-child(6),
+.digit.letter-t span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-u span:nth-child(2),
+.digit.letter-u span:nth-child(3),
+.digit.letter-u span:nth-child(4),
+.digit.letter-u span:nth-child(5),
+.digit.letter-u span:nth-child(6) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-v span:nth-child(3),
+.digit.letter-v span:nth-child(4),
+.digit.letter-v span:nth-child(5) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-w span:nth-child(2),
+.digit.letter-w span:nth-child(4),
+.digit.letter-w span:nth-child(6) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-x span:nth-child(2),
+.digit.letter-x span:nth-child(3),
+.digit.letter-x span:nth-child(5),
+.digit.letter-x span:nth-child(6),
+.digit.letter-x span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-y span:nth-child(2),
+.digit.letter-y span:nth-child(3),
+.digit.letter-y span:nth-child(4),
+.digit.letter-y span:nth-child(6),
+.digit.letter-y span:nth-child(7) {
+    background-color: #f55f46;
+    animation: pulse-color 2s infinite;
+}
+
+.digit.letter-z span:nth-child(1),
+.digit.letter-z span:nth-child(2),
+.digit.letter-z span:nth-child(4),
+.digit.letter-z span:nth-child(5),
+.digit.letter-z span:nth-child(7) {
+    background-color: #f55f46;
     animation: pulse-color 2s infinite;
 }
 
