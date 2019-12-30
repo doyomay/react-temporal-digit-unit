@@ -28,6 +28,9 @@
     transform: skewX(-5deg);
 }
 
+.digit:hover {
+    cursor: pointer;
+}
 .digit span {
     position: absolute;
     display: block;

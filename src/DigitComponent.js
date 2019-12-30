@@ -5,10 +5,17 @@ class DigitComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            digito: null
+            digito: 10,
         }
-        this.onClick = this.onClick.bind(this);
     }
+
+    componentDidMount() {
+        //Simulate init state
+        setTimeout(()=> {
+            this.setState( { digito: 0 })
+        }, 2000)
+    }
+
     digitToString(number) {
         let nameNumbers = ["zero", "one", "two", "three", "fourth", "five", "six", "seven", "eight", "nine"];
         if (typeof number === "string") {
@@ -17,25 +24,34 @@ class DigitComponent extends Component {
         }
         return nameNumbers[number];
     }
-    componentWillMount() {
-        this.state = {
-            digito: this.digitToString(this.props.display)
-        }
-    }
 
     stateDigitoToString() {
         return this.digitToString(this.state.digito);
     }
 
-    onClick() {
-        let numero = this.state.digito;
-        this.setState({
-            digito: (numero < 9 ? numero + 1 : -1)
-        });
+    handleDigit(type) {
+        let { digito } = this.state;
+        if(digito === 10) return false;
+        switch (type) {
+            case 'ADD':
+                digito++;
+                digito = digito > 9 ? 0 : digito;
+                break;
+            case 'SUBTRACT':
+                digito--;
+                digito = digito < 0 ? 9 : digito;
+                break;
+        }
+        this.setState({ digito });
     }
+
     render() {
         return (
-            <div onClick={this.onClick} className={"digit " + this.stateDigitoToString()}>
+            <div
+                onClick={() => this.handleDigit('ADD')}
+                onContextMenu={() => this.handleDigit('SUBTRACT')}
+                className={"digit " + this.stateDigitoToString()}
+            >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -46,10 +62,6 @@ class DigitComponent extends Component {
             </div>
         );
     }
-}
-
-DigitComponent.defaultProps = {
-    display: ""
 }
 
 export default DigitComponent;

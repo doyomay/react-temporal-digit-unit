@@ -6,69 +6,66 @@ import DigitComponent from './DigitComponent';
 import moment from 'moment';
 
 class TemporalDigitUnit extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dates: {
-        present: moment().format('MMM-DD-YYYY-hh-mm'),
-        destination: '',
-        last_time: ['oct-21-2015-07-28']
-      }
+    constructor(props) {
+        super(props);
+        this.state = {
+            dates: {
+                present: moment().format('MMM-DD-YYYY-hh-mm'),
+                destination: '',
+                last_time: ['oct-21-2015-07-28']
+            }
+        }
     }
-  }
-  render() {
-    return (
-      <section className="tablero"> {this.props.children} </section>
-    );
-  };
+
+    componentDidMount() {
+        console.log(this.state.dates)
+    }
+
+    render() {
+        return (
+            <section className="tablero"> {this.props.children} </section>
+        );
+    };
 }
 
-class TableroSeparetorComponent extends Component {
-  render() {
+const TableroSeparetorComponent = (props) => {
+    const { name, onHandler } = props;
     return (
-      <section className="tablero--separator">
-        <aside className="tablero--wrap">
-          <TableroDigitContainerComponent name="MONTH" longitud="3" />
-          <TableroDigitContainerComponent name="DAY" longitud="2" />
-          <TableroDigitContainerComponent name="YEAR" longitud="4" />
-          <TableroDigitContainerComponent name="HOUR" longitud="2" />
-          <TableroDigitContainerComponent name="MIN" longitud="2" />
-        </aside>
-        <aside className="tablero--wrap">
-          <h2 className="tablero--separator__name">{this.props.name} </h2>
-        </aside>
-      </section>
+        <section className="tablero--separator">
+            <aside className="tablero--wrap">
+                <TableroDigitContainerComponent name="MONTH" longitud={3} />
+                <TableroDigitContainerComponent name="DAY" longitud={2} />
+                <TableroDigitContainerComponent name="YEAR" longitud={4} />
+                <TableroDigitContainerComponent name="HOUR" longitud={2} />
+                <TableroDigitContainerComponent name="MIN" longitud={2} />
+            </aside>
+            <aside className="tablero--wrap">
+                <h2 className="tablero--separator__name" onClick={() => onHandler()}>{name}</h2>
+            </aside>
+        </section>
     )
-  };
 }
 
-class TableroDigitContainerComponent extends Component {
-  constructor() {
-    super();
-  }
-  render() {
-    const indents = [];
-    for (var i = 0; i < this.props.longitud; i++) {
-      indents.push(<DigitComponent display="" key={i} />);
-    }
+const TableroDigitContainerComponent = (props) => {
+    const { name, longitud } = props;
+    const indents = Array.from(Array(longitud), () => <DigitComponent display="" key={Math.floor(10 * Math.random())}/>);
     return (
-      <aside className="tablero--digit-container">
-        <h3>{this.props.name}</h3>
-        <aside className="tablero--digit-container__wrap">
-          {indents}
+        <aside className="tablero--digit-container">
+            <h3>{name}</h3>
+            <aside className="tablero--digit-container__wrap">
+                {indents}
+            </aside>
         </aside>
-      </aside>
     );
-  }
-}
+};
 
 class App extends Component {
   render() {
     return (
       <TemporalDigitUnit>
-        <TableroSeparetorComponent name="DESTINATION TIME" />
-        <TableroSeparetorComponent name="PRESENT TIME" />
-        <TableroSeparetorComponent name="LAST TIME DEPARTED" />
+        <TableroSeparetorComponent name="DESTINATION TIME" onHandler={() => console.log('DESTINATION TIME')} />
+        <TableroSeparetorComponent name="PRESENT TIME" onHandler={() => console.log('PRESENT TIME')}/>
+        <TableroSeparetorComponent name="LAST TIME DEPARTED" onHandler={() => console.log('LAST TIME DEPARTED')}/>
       </TemporalDigitUnit>
     );
   }

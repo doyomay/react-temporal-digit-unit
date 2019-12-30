@@ -22,6 +22,10 @@ body {
     padding: 10px;
 }
 
+.tablero--separator__name:hover {
+    cursor: pointer;
+}
+
 .tablero--wrap {
     display: flex;
     align-items: center;
